@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>上传 - 二次元头像展览库</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <main class="container">
+    <section class="panel">
+      <h2>批量上传头像</h2>
+      <form id="upload-form" enctype="multipart/form-data">
+        <div class="form-grid">
+          <input name="title" placeholder="标题（可选，默认文件名）" />
+          <input name="sourcePlatform" value="upload" placeholder="来源平台" />
+          <input name="sourceUrl" placeholder="来源链接（可选）" />
+          <input name="tags" placeholder="标签，逗号分隔（如 anime, cute）" />
+          <textarea name="description" placeholder="描述（可选）"></textarea>
+          <input name="images" type="file" accept="image/*" multiple required />
+        </div>
+        <div style="margin-top: 10px;">
+          <button id="submit-btn" type="submit">上传并入库</button>
+        </div>
+      </form>
+      <div class="helper">支持多文件上传，后端按 SHA-256 自动去重。</div>
+      <div id="message" class="message" hidden></div>
+    </section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/upload.js"></script>
+</body>
+</html>

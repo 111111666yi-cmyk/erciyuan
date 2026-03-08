@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图库 - 二次元头像展览库</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <main class="container">
+    <section class="panel">
+      <h2>头像图库</h2>
+      <form id="search-form" class="form-grid">
+        <input id="keyword" placeholder="关键词（标题/描述）" />
+        <select id="source">
+          <option value="">全部来源</option>
+          <option value="upload">上传</option>
+          <option value="url">URL 导入</option>
+          <option value="tiktok">TikTok</option>
+          <option value="telegram">Telegram</option>
+          <option value="chrome">Chrome 页面</option>
+        </select>
+        <input id="tag" placeholder="按标签过滤（如 anime）" />
+        <button type="submit">筛选</button>
+      </form>
+      <div class="helper">点击卡片会记录一次访问点击，可用于热门头像统计。</div>
+      <div id="message" class="message" hidden></div>
+    </section>
+
+    <section>
+      <div id="gallery-grid" class="gallery-grid"></div>
+      <div class="pager">
+        <button class="secondary" id="prev-btn">上一页</button>
+        <button class="secondary" id="next-btn">下一页</button>
+        <span id="pager-info" class="helper"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/gallery.js"></script>
+</body>
+</html>

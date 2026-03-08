@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>外部采集 - 二次元头像展览库</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <main class="container">
+    <section class="panel">
+      <h2>URL 批量导入</h2>
+      <form id="url-import-form">
+        <div class="form-grid">
+          <textarea id="urls" placeholder="每行一个图片 URL" required></textarea>
+          <input id="url-title" placeholder="默认标题（可选）" />
+          <input id="url-source-platform" value="url" placeholder="来源平台（如 tiktok）" />
+          <input id="url-source-url" placeholder="来源页面（可选）" />
+          <input id="url-tags" placeholder="标签，逗号分隔" />
+        </div>
+        <div style="margin-top: 10px;">
+          <button id="url-submit-btn" type="submit">开始导入</button>
+        </div>
+      </form>
+      <div id="url-message" class="message" hidden></div>
+    </section>
+
+    <section class="panel">
+      <h2>实时采集（Chrome / Telegram / TikTok）</h2>
+      <form id="scrape-form">
+        <div class="form-grid">
+          <select id="platform" required>
+            <option value="chrome">chrome（任意页面）</option>
+            <option value="telegram">telegram（建议公开频道/页面）</option>
+            <option value="tiktok">tiktok（公开页面）</option>
+          </select>
+          <input id="page-url" placeholder="目标页面 URL" required />
+          <input id="limit" type="number" min="1" max="100" value="30" />
+          <input id="scrape-tags" placeholder="附加标签（逗号分隔）" />
+          <label style="display:flex;align-items:center;gap:8px;padding:8px 0;">
+            <input id="persist" type="checkbox" checked />
+            直接入库（取消勾选则仅抓取预览）
+          </label>
+        </div>
+        <div style="margin-top: 10px;">
+          <button id="scrape-submit-btn" type="submit">执行采集</button>
+        </div>
+      </form>
+      <div class="helper">提示：部分平台需登录态。可通过 `PLAYWRIGHT_STORAGE_STATE` 注入登录会话。</div>
+      <div id="scrape-message" class="message" hidden></div>
+    </section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/import.js"></script>
+</body>
+</html>
