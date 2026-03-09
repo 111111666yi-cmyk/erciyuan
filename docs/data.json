@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-09T03:49:55.907Z",
-  "total": 245,
+  "generatedAt": "2026-03-09T07:09:29.286Z",
+  "total": 191,
   "items": [
     {
       "id": 413,
@@ -717,20 +717,6 @@
       "createdAt": "2026-03-08T14:24:14.000Z"
     },
     {
-      "id": 296,
-      "title": "Telegram Avatar 32",
-      "description": "scraped_at=2026-03-08T14:24:12.515Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/fccc1aea6562154ba915ee17d9a978f7b2b9a738ab1321badd74842ea28af4b8.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T14:24:12.000Z"
-    },
-    {
       "id": 295,
       "title": "Telegram Avatar 31",
       "description": "scraped_at=2026-03-08T14:24:11.536Z",
@@ -1275,20 +1261,6 @@
       ],
       "clickCount": 0,
       "createdAt": "2026-03-08T14:12:21.000Z"
-    },
-    {
-      "id": 208,
-      "title": "Telegram Avatar 44",
-      "description": "scraped_at=2026-03-08T14:12:20.444Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/421fb7a50b9cadddc41a79814f9e2b1cdfe54c87e44f89fe681f0b2bc3c275b2.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T14:12:20.000Z"
     },
     {
       "id": 207,
@@ -1837,34 +1809,6 @@
       "createdAt": "2026-03-08T14:01:49.000Z"
     },
     {
-      "id": 159,
-      "title": "Telegram Avatar 45",
-      "description": "scraped_at=2026-03-08T14:01:48.803Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/e192c4f90c91e9b35a3c2e89474d953d6f0eafec4336e247c79f2e233aaa7695.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T14:01:48.000Z"
-    },
-    {
-      "id": 158,
-      "title": "Telegram Avatar 44",
-      "description": "scraped_at=2026-03-08T14:01:47.744Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/3109809f89921bbb9592ef2ec788e0dd2e30fcb4da4d6f44b317d7764bb4d2b6.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T14:01:47.000Z"
-    },
-    {
       "id": 157,
       "title": "Telegram Avatar 43",
       "description": "scraped_at=2026-03-08T14:01:46.061Z",
@@ -1989,20 +1933,6 @@
       ],
       "clickCount": 0,
       "createdAt": "2026-03-08T14:01:36.000Z"
-    },
-    {
-      "id": 148,
-      "title": "Telegram Avatar 34",
-      "description": "scraped_at=2026-03-08T14:01:35.528Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/50a22c152d14900d3ebe7c58143b7640262af6f5be2d4b0677fcb2ba5055767f.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T14:01:35.000Z"
     },
     {
       "id": 147,
@@ -2187,76 +2117,6 @@
       "createdAt": "2026-03-08T14:01:19.000Z"
     },
     {
-      "id": 101,
-      "title": "Telegram Avatar 50",
-      "description": "scraped_at=2026-03-08T13:18:49.918Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/6b25676a608f59fe90ba89af0c162d0e8d483fdb5b32af38b25a704fa63aeb22.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:49.000Z"
-    },
-    {
-      "id": 99,
-      "title": "Telegram Avatar 48",
-      "description": "scraped_at=2026-03-08T13:18:48.003Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/f256946abcd81fa958ef0e7e12754229be0aaa2e6832817596033aa887d2c826.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:48.000Z"
-    },
-    {
-      "id": 100,
-      "title": "Telegram Avatar 49",
-      "description": "scraped_at=2026-03-08T13:18:48.960Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/694804760c4471aab9f229be5bed41190e221fa7871894e7b1d8160fed22d0bd.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:48.000Z"
-    },
-    {
-      "id": 98,
-      "title": "Telegram Avatar 47",
-      "description": "scraped_at=2026-03-08T13:18:46.608Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/fe17f10667f790236f374575b93c5e831026b288f099b94c8473f4a6707ab194.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:46.000Z"
-    },
-    {
-      "id": 97,
-      "title": "Telegram Avatar 46",
-      "description": "scraped_at=2026-03-08T13:18:45.168Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/8869211f35a7e7899f05ec38a4ef138ca2cbb06bc055c564a4154bbb96289397.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:45.000Z"
-    },
-    {
       "id": 96,
       "title": "Telegram Avatar 45",
       "description": "scraped_at=2026-03-08T13:18:43.755Z",
@@ -2297,34 +2157,6 @@
       ],
       "clickCount": 0,
       "createdAt": "2026-03-08T13:18:41.000Z"
-    },
-    {
-      "id": 93,
-      "title": "Telegram Avatar 42",
-      "description": "scraped_at=2026-03-08T13:18:40.184Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/871da41dc20d96ce17a2a0f8fbd8e0f6188f645b137ff19cfd92f263d184d3e8.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:40.000Z"
-    },
-    {
-      "id": 92,
-      "title": "Telegram Avatar 41",
-      "description": "scraped_at=2026-03-08T13:18:39.020Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/ddca2fdaca849f56d138372c87c4a201a1ebd10219b62e4a4e8ac77f2f072524.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:39.000Z"
     },
     {
       "id": 91,
@@ -2509,34 +2341,6 @@
       "createdAt": "2026-03-08T13:18:22.000Z"
     },
     {
-      "id": 77,
-      "title": "Telegram Avatar 26",
-      "description": "scraped_at=2026-03-08T13:18:21.081Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/06f7d2d665d053fa8c6ef4362f41f4bb37440343dc49f568e0f4c640175a6203.webp",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:21.000Z"
-    },
-    {
-      "id": 76,
-      "title": "Telegram Avatar 25",
-      "description": "scraped_at=2026-03-08T13:18:19.948Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/730f1f94c3f137c85f46362ea020abd40a931d53b1eb183f22d9355628d2185c.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:19.000Z"
-    },
-    {
       "id": 75,
       "title": "Telegram Avatar 24",
       "description": "scraped_at=2026-03-08T13:18:18.840Z",
@@ -2635,90 +2439,6 @@
       "createdAt": "2026-03-08T13:18:09.000Z"
     },
     {
-      "id": 65,
-      "title": "Telegram Avatar 14",
-      "description": "scraped_at=2026-03-08T13:18:07.505Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/9194987f5c35dc24d54ce920c63f0b47f29711adac3e627b4f637a64ca5d955b.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:07.000Z"
-    },
-    {
-      "id": 63,
-      "title": "Telegram Avatar 12",
-      "description": "scraped_at=2026-03-08T13:18:05.487Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/cbcd9d08a3b150812f8a44676c26352360cbce7519f26f68acb24fac1cc14e24.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:05.000Z"
-    },
-    {
-      "id": 61,
-      "title": "Telegram Avatar 10",
-      "description": "scraped_at=2026-03-08T13:18:03.176Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/adeef39e91bb70a244031141249f3b99783c8753400d03d70944e4e56805a864.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:18:03.000Z"
-    },
-    {
-      "id": 60,
-      "title": "Telegram Avatar 9",
-      "description": "scraped_at=2026-03-08T13:17:59.797Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/4f930d2d52c8d6b0209888211a924e4d325069997bae6966a4005da9adff4438.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:17:59.000Z"
-    },
-    {
-      "id": 57,
-      "title": "Telegram Avatar 6",
-      "description": "scraped_at=2026-03-08T13:17:57.167Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/497347a91f888753272a7069f388fcdae34a46c939c34f5fc9541b9846ac514f.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:17:57.000Z"
-    },
-    {
-      "id": 56,
-      "title": "Telegram Avatar 5",
-      "description": "scraped_at=2026-03-08T13:17:56.115Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/8124bf3a74b3714a3d51c4d657716686a791d53a04b002bbc6ea9884d247ddd4.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T13:17:56.000Z"
-    },
-    {
       "id": 51,
       "title": "Telegram Avatar 50",
       "description": "scraped_at=2026-03-08T12:54:05.239Z",
@@ -2775,20 +2495,6 @@
       "createdAt": "2026-03-08T12:54:01.000Z"
     },
     {
-      "id": 47,
-      "title": "Telegram Avatar 46",
-      "description": "scraped_at=2026-03-08T12:54:00.108Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/a1da00676f751039c2d153c9994b2a87182bd8b8648770031e8295abe82dd050.webp",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:54:00.000Z"
-    },
-    {
       "id": 46,
       "title": "Telegram Avatar 45",
       "description": "scraped_at=2026-03-08T12:53:58.867Z",
@@ -2843,20 +2549,6 @@
       ],
       "clickCount": 0,
       "createdAt": "2026-03-08T12:53:54.000Z"
-    },
-    {
-      "id": 42,
-      "title": "Telegram Avatar 41",
-      "description": "scraped_at=2026-03-08T12:53:53.516Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/36e2231f8861ca7e4c9d22526b2a4cf84c5bc96f2a65a787ff09dbd1e3302bc7.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:53.000Z"
     },
     {
       "id": 41,
@@ -2943,34 +2635,6 @@
       "createdAt": "2026-03-08T12:53:45.000Z"
     },
     {
-      "id": 36,
-      "title": "Telegram Avatar 35",
-      "description": "scraped_at=2026-03-08T12:53:45.917Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/6022ea3b3c0cbecc046d8da1e2df94d9db892fc54aa2c417c3a5cfd4ef5fceed.webp",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:45.000Z"
-    },
-    {
-      "id": 34,
-      "title": "Telegram Avatar 33",
-      "description": "scraped_at=2026-03-08T12:53:43.448Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/d12212e9f6bd84b41577bf0172d06bab93f06a5f741969082bb42609c31b1136.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:43.000Z"
-    },
-    {
       "id": 33,
       "title": "Telegram Avatar 32",
       "description": "scraped_at=2026-03-08T12:53:42.208Z",
@@ -2983,20 +2647,6 @@
       ],
       "clickCount": 0,
       "createdAt": "2026-03-08T12:53:42.000Z"
-    },
-    {
-      "id": 32,
-      "title": "Telegram Avatar 31",
-      "description": "scraped_at=2026-03-08T12:53:40.821Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/39b7df19843b1e10f4a8c9354b921415070f2cc2ac52d929f28b9ef557101749.webp",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:40.000Z"
     },
     {
       "id": 31,
@@ -3013,132 +2663,6 @@
       "createdAt": "2026-03-08T12:53:39.000Z"
     },
     {
-      "id": 30,
-      "title": "Telegram Avatar 29",
-      "description": "scraped_at=2026-03-08T12:53:38.870Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/a286e6c56e655148be02398b13c900a0fba89b1234fba149b636b61e412bb5d5.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:38.000Z"
-    },
-    {
-      "id": 29,
-      "title": "Telegram Avatar 28",
-      "description": "scraped_at=2026-03-08T12:53:37.463Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/125af0af5ba7894572388c3efcdf2a3dee53c0afdf7d745c2a7f016953745708.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:37.000Z"
-    },
-    {
-      "id": 28,
-      "title": "Telegram Avatar 27",
-      "description": "scraped_at=2026-03-08T12:53:36.041Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/691c2437df2faf4a9579d6063ff4ba220fae9e606fb62f345618080914ee40a0.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:36.000Z"
-    },
-    {
-      "id": 26,
-      "title": "Telegram Avatar 25",
-      "description": "scraped_at=2026-03-08T12:53:34.069Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/9940b6c3b02df8a0465201a97476ff17de449622d2db1a5a2cd15d86467d3e62.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:34.000Z"
-    },
-    {
-      "id": 27,
-      "title": "Telegram Avatar 26",
-      "description": "scraped_at=2026-03-08T12:53:34.997Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/afd4797fe664010290621bc5c49a6bb548bf21b8ce597a34034c85727da20c40.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:34.000Z"
-    },
-    {
-      "id": 25,
-      "title": "Telegram Avatar 24",
-      "description": "scraped_at=2026-03-08T12:53:32.695Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/aaab5a153c4113b9f7597452ca295eda56c4861e0dcab8f1b026376225eb0d08.webp",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:32.000Z"
-    },
-    {
-      "id": 24,
-      "title": "Telegram Avatar 23",
-      "description": "scraped_at=2026-03-08T12:53:31.852Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/8bd8ab4561fa67c2e10c52650b459c6e040774d8d2d02c6f40ee428417eef0f3.webp",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:31.000Z"
-    },
-    {
-      "id": 23,
-      "title": "Telegram Avatar 22",
-      "description": "scraped_at=2026-03-08T12:53:30.812Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/e5dd0f150f7577205b2a969c03653c9c0cc13ed634ac08607c34cddd5e7639b7.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:30.000Z"
-    },
-    {
-      "id": 22,
-      "title": "Telegram Avatar 21",
-      "description": "scraped_at=2026-03-08T12:53:29.612Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/d84b565b27e91698f93ba565fe83db308c79bc8642389ef65e72b234c1b3a163.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:29.000Z"
-    },
-    {
       "id": 21,
       "title": "Telegram Avatar 20",
       "description": "scraped_at=2026-03-08T12:53:28.128Z",
@@ -3151,286 +2675,6 @@
       ],
       "clickCount": 0,
       "createdAt": "2026-03-08T12:53:28.000Z"
-    },
-    {
-      "id": 20,
-      "title": "Telegram Avatar 19",
-      "description": "scraped_at=2026-03-08T12:53:26.283Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/23d5a2486772259124ce7b341ceef38d59fd72ba0158c1b1e3ef557cb7984e61.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 3,
-      "createdAt": "2026-03-08T12:53:26.000Z"
-    },
-    {
-      "id": 19,
-      "title": "Telegram Avatar 18",
-      "description": "scraped_at=2026-03-08T12:53:25.255Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/42d73dbd8f9e5c13c8f4b8ab7753e555c912b692e0f6a95a4183367856eef02a.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:25.000Z"
-    },
-    {
-      "id": 18,
-      "title": "Telegram Avatar 17",
-      "description": "scraped_at=2026-03-08T12:53:24.147Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/01597a2c9e4dc9fab8a8dc86fda7fcba65fb02f633a25de6796cdf0a3a65c7ab.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:24.000Z"
-    },
-    {
-      "id": 17,
-      "title": "Telegram Avatar 16",
-      "description": "scraped_at=2026-03-08T12:53:23.087Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/96080747a0e8dd2542ecf6f92a5fc2d903cd5b7b2b4ba6c56506d496fd739a6b.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 1,
-      "createdAt": "2026-03-08T12:53:23.000Z"
-    },
-    {
-      "id": 16,
-      "title": "Telegram Avatar 15",
-      "description": "scraped_at=2026-03-08T12:53:21.508Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/cbabfb15e141a54945c71bfbdbe252d8f84a2f86cbae5b35509d6fd2ffebd543.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:21.000Z"
-    },
-    {
-      "id": 15,
-      "title": "Telegram Avatar 14",
-      "description": "scraped_at=2026-03-08T12:53:20.448Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/b7c8dd763737060599d840d09b9d9b0d37fda50761ed334f340dfd499dc0d36c.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:20.000Z"
-    },
-    {
-      "id": 14,
-      "title": "Telegram Avatar 13",
-      "description": "scraped_at=2026-03-08T12:53:19.227Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/aa0f8ce6d349efc750ecd7f2b532a083978f9d0814b26536533e7d0ec38b4b22.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:19.000Z"
-    },
-    {
-      "id": 13,
-      "title": "Telegram Avatar 12",
-      "description": "scraped_at=2026-03-08T12:53:17.892Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/f93841836c1419437c3ac238b85130dd104b1b4b14992389099ddad0fdd216a3.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:17.000Z"
-    },
-    {
-      "id": 12,
-      "title": "Telegram Avatar 11",
-      "description": "scraped_at=2026-03-08T12:53:16.791Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/bb8eaa64854eb2f7875bbbfc373f2dd261d8247ed84a045d1da50cd7e1b73878.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:16.000Z"
-    },
-    {
-      "id": 11,
-      "title": "Telegram Avatar 10",
-      "description": "scraped_at=2026-03-08T12:53:15.703Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/de881cb4fc7cb36ec5787caab6c9c1faa048f73be5e25b92a082299feeaaf85f.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:15.000Z"
-    },
-    {
-      "id": 10,
-      "title": "Telegram Avatar 9",
-      "description": "scraped_at=2026-03-08T12:53:14.493Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/0aa310ab571de868197669da953986638391d85d6fba557a63909faa97def7d9.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:14.000Z"
-    },
-    {
-      "id": 9,
-      "title": "Telegram Avatar 8",
-      "description": "scraped_at=2026-03-08T12:53:13.384Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/d8d7aded3fcdab56f272aa190325d138ed3dafae726ee84c0fb0fa4c4c8c150f.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:13.000Z"
-    },
-    {
-      "id": 8,
-      "title": "Telegram Avatar 7",
-      "description": "scraped_at=2026-03-08T12:53:12.339Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/d95649d040fc3f1071607219e684d91526ac4db4305a1a40051c45950b133f5d.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:12.000Z"
-    },
-    {
-      "id": 7,
-      "title": "Telegram Avatar 6",
-      "description": "scraped_at=2026-03-08T12:53:11.629Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/7bb95ffaf93709d1977ed6c59f95f55ce1113549ea8efe32e971034ab88ed8bd.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:11.000Z"
-    },
-    {
-      "id": 6,
-      "title": "Telegram Avatar 5",
-      "description": "scraped_at=2026-03-08T12:53:10.695Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/952e58db0644adeed45d810d16cb080dfefb4ee6c431d1e7ef1c9535404e7820.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:10.000Z"
-    },
-    {
-      "id": 5,
-      "title": "Telegram Avatar 4",
-      "description": "scraped_at=2026-03-08T12:53:09.747Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/d3c28968589b509f06430dc01e3809644b7c0e6abadafd28c6d6137dd284b87a.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:09.000Z"
-    },
-    {
-      "id": 4,
-      "title": "Telegram Avatar 3",
-      "description": "scraped_at=2026-03-08T12:53:08.930Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/2536ac185d7b8bb78fe883e207bd135a1b68d00745c9965c9d16b83b42aad2b4.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:08.000Z"
-    },
-    {
-      "id": 3,
-      "title": "Telegram Avatar 2",
-      "description": "scraped_at=2026-03-08T12:53:07.479Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/6a8a08e576220bac8da09ec5d6b252575e51b406ab38a18385c344596bc9c925.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:07.000Z"
-    },
-    {
-      "id": 2,
-      "title": "Telegram Avatar 1",
-      "description": "scraped_at=2026-03-08T12:53:06.664Z",
-      "sourcePlatform": "telegram",
-      "sourceUrl": "https://web.telegram.org/k/#@gongzhutonghao",
-      "imagePath": "uploads/images/86ad67283940395111ce446300a2690d4bb624971c25dc444468e93362ed5465.jpg",
-      "tags": [
-        "telegram",
-        "channel-avatar"
-      ],
-      "clickCount": 0,
-      "createdAt": "2026-03-08T12:53:06.000Z"
-    },
-    {
-      "id": 1,
-      "title": "Local Test Avatar",
-      "description": null,
-      "sourcePlatform": "upload",
-      "sourceUrl": null,
-      "imagePath": "uploads/images/abcb6031af6fe5567725115b64c3823352e5c49c31c4f24d5619a2c42b1d6514.png",
-      "tags": [
-        "anime",
-        "test"
-      ],
-      "clickCount": 13,
-      "createdAt": "2026-03-08T09:57:59.000Z"
     }
   ]
 }
