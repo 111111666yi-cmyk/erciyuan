@@ -1,4 +1,4 @@
-mountNav('upload');
+ï»¿mountNav('upload');
 
 const form = document.getElementById('upload-form');
 
@@ -23,14 +23,14 @@ form.addEventListener('submit', async (event) => {
 
     const data = await response.json();
     if (!data.success) {
-      showMessage('message', data.message || 'ÉÏ´«Ê§°Ü', 'warn');
+      showMessage('message', data.message || 'ä¸Šä¼ å¤±è´¥', 'warn');
       return;
     }
 
     showMessage('message', data.message, 'ok');
     form.reset();
   } catch (error) {
-    showMessage('message', error.message || 'ÉÏ´«Ê§°Ü', 'warn');
+    showMessage('message', error.message || 'ä¸Šä¼ å¤±è´¥', 'warn');
   } finally {
     submitBtn.disabled = false;
   }

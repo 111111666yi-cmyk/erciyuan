@@ -1,4 +1,4 @@
-mountNav('import');
+ï»¿mountNav('import');
 
 const urlForm = document.getElementById('url-import-form');
 const scrapeForm = document.getElementById('scrape-form');
@@ -37,14 +37,14 @@ urlForm.addEventListener('submit', async (event) => {
 
     const data = await response.json();
     if (!data.success) {
-      showMessage('url-message', data.message || 'URL µ¼ÈëÊ§°Ü', 'warn');
+      showMessage('url-message', data.message || 'URL å¯¼å…¥å¤±è´¥', 'warn');
       return;
     }
 
     showMessage('url-message', data.message, 'ok');
     urlForm.reset();
   } catch (error) {
-    showMessage('url-message', error.message || 'URL µ¼ÈëÊ§°Ü', 'warn');
+    showMessage('url-message', error.message || 'URL å¯¼å…¥å¤±è´¥', 'warn');
   } finally {
     submitBtn.disabled = false;
   }
@@ -78,13 +78,13 @@ scrapeForm.addEventListener('submit', async (event) => {
 
     const data = await response.json();
     if (!data.success) {
-      showMessage('scrape-message', data.message || '²É¼¯Ê§°Ü', 'warn');
+      showMessage('scrape-message', data.message || 'é‡‡é›†å¤±è´¥', 'warn');
       return;
     }
 
     showMessage('scrape-message', data.message, 'ok');
   } catch (error) {
-    showMessage('scrape-message', error.message || '²É¼¯Ê§°Ü', 'warn');
+    showMessage('scrape-message', error.message || 'é‡‡é›†å¤±è´¥', 'warn');
   } finally {
     submitBtn.disabled = false;
   }

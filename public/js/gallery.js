@@ -1,4 +1,4 @@
-mountNav('gallery');
+ï»¿mountNav('gallery');
 
 const state = {
   page: 1,
@@ -26,7 +26,7 @@ async function sendAdminRequest(url, init) {
   if (!headers['x-admin-token']) {
     const token = ensureAdminToken();
     if (!token) {
-      throw new Error('Î´ÉèÖÃ¹ÜÀíÔ±ÁîÅÆ');
+      throw new Error('æœªè®¾ç½®ç®¡ç†å‘˜ä»¤ç‰Œ');
     }
     headers = authHeaders(init.headers || {});
   }
@@ -39,7 +39,7 @@ function renderItems(items) {
   root.innerHTML = '';
 
   if (!items.length) {
-    root.innerHTML = '<div class="panel">ÔİÎŞÊı¾İ£¬ÇëÏÈÉÏ´«»òµ¼Èë¡£</div>';
+    root.innerHTML = '<div class="panel">æš‚æ— æ•°æ®ï¼Œè¯·å…ˆä¸Šä¼ æˆ–å¯¼å…¥ã€‚</div>';
     return;
   }
 
@@ -48,20 +48,20 @@ function renderItems(items) {
     card.className = 'card';
 
     const tags = (item.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join('');
-    const visibilityLabel = item.isShareVisible ? '¹«¿ª' : 'Òş²Ø';
+    const visibilityLabel = item.isShareVisible ? 'å…¬å¼€' : 'éšè—';
 
     card.innerHTML = `
       <img src="${item.storagePath}" alt="${item.title}" loading="lazy" />
       <div class="card-body">
         <p class="card-title">${item.title}</p>
-        <div class="meta-row">ID: ${item.id} | À´Ô´: ${item.sourcePlatform} | µã»÷: <span data-click-id="${item.id}">${item.clickCount}</span></div>
-        <div class="meta-row">ÔÆ¶Ë×´Ì¬: <span class="status-pill ${item.isShareVisible ? 'public' : 'hidden'}">${visibilityLabel}</span></div>
+        <div class="meta-row">ID: ${item.id} | æ¥æº: ${item.sourcePlatform} | ç‚¹å‡»: <span data-click-id="${item.id}">${item.clickCount}</span></div>
+        <div class="meta-row">äº‘ç«¯çŠ¶æ€: <span class="status-pill ${item.isShareVisible ? 'public' : 'hidden'}">${visibilityLabel}</span></div>
         <div class="tag-list">${tags}</div>
         <div class="meta-row">${new Date(item.createdAt).toLocaleString()}</div>
         <div class="card-actions">
-          <a class="btn secondary" href="${item.storagePath}" download>ÏÂÔØ</a>
-          <button class="secondary" data-share-id="${item.id}" data-next-visible="${item.isShareVisible ? '0' : '1'}" type="button">${item.isShareVisible ? 'ÔÆ¶ËÒş²Ø' : '»Ö¸´¹«¿ª'}</button>
-          <button class="danger" data-delete-id="${item.id}" type="button">É¾³ı</button>
+          <a class="btn secondary" href="${item.storagePath}" download>ä¸‹è½½</a>
+          <button class="secondary" data-share-id="${item.id}" data-next-visible="${item.isShareVisible ? '0' : '1'}" type="button">${item.isShareVisible ? 'äº‘ç«¯éšè—' : 'æ¢å¤å…¬å¼€'}</button>
+          <button class="danger" data-delete-id="${item.id}" type="button">åˆ é™¤</button>
         </div>
       </div>
     `;
@@ -80,8 +80,8 @@ function renderItems(items) {
       event.stopPropagation();
 
       const nextVisible = shareBtn.getAttribute('data-next-visible') === '1';
-      const actionLabel = nextVisible ? '»Ö¸´¹«¿ª' : '´ÓÔÆ¶ËÒş²Ø';
-      const ok = window.confirm(`È·ÈÏ${actionLabel}¡¸${item.title}¡¹Âğ£¿`);
+      const actionLabel = nextVisible ? 'æ¢å¤å…¬å¼€' : 'ä»äº‘ç«¯éšè—';
+      const ok = window.confirm(`ç¡®è®¤${actionLabel}ã€Œ${item.title}ã€å—ï¼Ÿ`);
       if (!ok) return;
 
       try {
@@ -93,14 +93,14 @@ function renderItems(items) {
 
         const data = await response.json();
         if (!data.success) {
-          showMessage('message', data.message || '²Ù×÷Ê§°Ü', 'warn');
+          showMessage('message', data.message || 'æ“ä½œå¤±è´¥', 'warn');
           return;
         }
 
         showMessage('message', data.message, 'ok');
         load();
       } catch (error) {
-        showMessage('message', error.message || '²Ù×÷Ê§°Ü', 'warn');
+        showMessage('message', error.message || 'æ“ä½œå¤±è´¥', 'warn');
       }
     });
 
@@ -108,21 +108,21 @@ function renderItems(items) {
     deleteBtn.addEventListener('click', async (event) => {
       event.stopPropagation();
 
-      const ok = window.confirm(`È·ÈÏÉ¾³ıÍ¼Æ¬¡¸${item.title}¡¹Âğ£¿`);
+      const ok = window.confirm(`ç¡®è®¤åˆ é™¤å›¾ç‰‡ã€Œ${item.title}ã€å—ï¼Ÿ`);
       if (!ok) return;
 
       try {
         const response = await sendAdminRequest(`/api/avatars/${item.id}`, { method: 'DELETE' });
         const data = await response.json();
         if (!data.success) {
-          showMessage('message', data.message || 'É¾³ıÊ§°Ü', 'warn');
+          showMessage('message', data.message || 'åˆ é™¤å¤±è´¥', 'warn');
           return;
         }
 
-        showMessage('message', 'É¾³ı³É¹¦', 'ok');
+        showMessage('message', 'åˆ é™¤æˆåŠŸ', 'ok');
         load();
       } catch (error) {
-        showMessage('message', error.message || 'É¾³ıÊ§°Ü', 'warn');
+        showMessage('message', error.message || 'åˆ é™¤å¤±è´¥', 'warn');
       }
     });
 
@@ -137,14 +137,14 @@ async function load() {
   const data = await response.json();
 
   if (!data.success) {
-    showMessage('message', data.message || '¼ÓÔØÊ§°Ü', 'warn');
+    showMessage('message', data.message || 'åŠ è½½å¤±è´¥', 'warn');
     return;
   }
 
   renderItems(data.items || []);
 
   const totalPage = Math.max(1, Math.ceil((data.total || 0) / state.limit));
-  document.getElementById('pager-info').textContent = `µÚ ${state.page} / ${totalPage} Ò³£¬¹² ${data.total} Ìõ`;
+  document.getElementById('pager-info').textContent = `ç¬¬ ${state.page} / ${totalPage} é¡µï¼Œå…± ${data.total} æ¡`;
   document.getElementById('prev-btn').disabled = state.page <= 1;
   document.getElementById('next-btn').disabled = state.page >= totalPage;
 }

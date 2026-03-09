@@ -1,11 +1,11 @@
-const navHtml = `
+ï»¿const navHtml = `
 <header class="topbar">
-  <div class="title">¶ş´ÎÔªÍ·ÏñÕ¹ÀÀ¿â</div>
+  <div class="title">äºŒæ¬¡å…ƒå¤´åƒå±•è§ˆåº“</div>
   <nav>
-    <a href="/gallery.html" data-nav="gallery">Í¼¿â</a>
-    <a href="/upload.html" data-nav="upload">ÉÏ´«</a>
-    <a href="/import.html" data-nav="import">Íâ²¿²É¼¯</a>
-    <button type="button" class="token-btn" id="admin-token-btn">¹ÜÀíÔ±ÁîÅÆ</button>
+    <a href="/gallery.html" data-nav="gallery">å›¾åº“</a>
+    <a href="/upload.html" data-nav="upload">ä¸Šä¼ </a>
+    <a href="/import.html" data-nav="import">å¤–éƒ¨é‡‡é›†</a>
+    <button type="button" class="token-btn" id="admin-token-btn">ç®¡ç†å‘˜ä»¤ç‰Œ</button>
   </nav>
 </header>
 `;
@@ -23,13 +23,13 @@ function mountNav(activeKey) {
   const tokenBtn = document.getElementById('admin-token-btn');
   if (tokenBtn) {
     const refreshText = () => {
-      tokenBtn.textContent = getAdminToken() ? '¹ÜÀíÔ±ÁîÅÆ: ÒÑÉèÖÃ' : '¹ÜÀíÔ±ÁîÅÆ';
+      tokenBtn.textContent = getAdminToken() ? 'ç®¡ç†å‘˜ä»¤ç‰Œï¼šå·²è®¾ç½®' : 'ç®¡ç†å‘˜ä»¤ç‰Œ';
     };
 
     refreshText();
     tokenBtn.addEventListener('click', () => {
       const current = getAdminToken();
-      const next = window.prompt('ÇëÊäÈë¹ÜÀíÔ±ÁîÅÆ£¨Áô¿Õ¿ÉÇå³ı£©', current || '');
+      const next = window.prompt('è¯·è¾“å…¥ç®¡ç†å‘˜ä»¤ç‰Œï¼ˆç•™ç©ºå¯æ¸…é™¤ï¼‰', current || '');
       if (next === null) return;
       setAdminToken(next.trim());
       refreshText();
@@ -53,7 +53,7 @@ function ensureAdminToken() {
   const existing = getAdminToken();
   if (existing) return existing;
 
-  const entered = window.prompt('ÇëÊäÈë¹ÜÀíÔ±ÁîÅÆ');
+  const entered = window.prompt('è¯·è¾“å…¥ç®¡ç†å‘˜ä»¤ç‰Œ');
   if (!entered) return '';
   setAdminToken(entered.trim());
   return getAdminToken();
