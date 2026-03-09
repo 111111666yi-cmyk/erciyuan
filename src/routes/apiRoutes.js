@@ -1,9 +1,10 @@
-﻿const express = require('express');
+const express = require('express');
 const multer = require('multer');
 const env = require('../config/env');
 
-function createApiRouter(avatarController) {
+function createApiRouter(avatarController, options = {}) {
   const router = express.Router();
+  const requireAdmin = options.requireAdmin || ((req, res, next) => next());
 
   const upload = multer({
     storage: multer.memoryStorage(),
@@ -14,11 +15,12 @@ function createApiRouter(avatarController) {
   });
 
   router.get('/avatars', avatarController.list);
-  router.post('/avatars/upload', upload.array('images', 50), avatarController.upload);
-  router.post('/avatars/import/urls', avatarController.importByUrls);
-  router.post('/avatars/import/scrape', avatarController.scrapeImport);
+  router.post('/avatars/upload', requireAdmin, upload.array('images', 50), avatarController.upload);
+  router.post('/avatars/import/urls', requireAdmin, avatarController.importByUrls);
+  router.post('/avatars/import/scrape', requireAdmin, avatarController.scrapeImport);
   router.post('/avatars/:id/click', avatarController.click);
-  router.delete('/avatars/:id', avatarController.remove);
+  router.patch('/avatars/:id/share-visibility', requireAdmin, avatarController.setShareVisibility);
+  router.delete('/avatars/:id', requireAdmin, avatarController.remove);
 
   return router;
 }

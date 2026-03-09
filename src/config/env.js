@@ -1,4 +1,4 @@
-﻿const path = require('path');
+const path = require('path');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -32,5 +32,8 @@ module.exports = {
     timeoutMs: toInt(process.env.SCRAPER_TIMEOUT_MS, 45000),
     maxScroll: toInt(process.env.SCRAPER_MAX_SCROLL, 6),
     storageState: process.env.PLAYWRIGHT_STORAGE_STATE || ''
+  },
+  security: {
+    adminToken: process.env.ADMIN_TOKEN || ''
   }
 };

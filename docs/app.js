@@ -1,4 +1,4 @@
-锘縜sync function run() {
+async function run() {
   const meta = document.getElementById('meta');
   const grid = document.getElementById('grid');
 
@@ -6,7 +6,7 @@
     const response = await fetch('./data.json', { cache: 'no-store' });
     const data = await response.json();
 
-    meta.textContent = `鐢熸垚鏃堕棿: ${new Date(data.generatedAt).toLocaleString()} | 鎬绘暟: ${data.total}`;
+    meta.textContent = `生成时间: ${new Date(data.generatedAt).toLocaleString()} | 总数: ${data.total}`;
 
     for (const item of data.items || []) {
       const card = document.createElement('article');
@@ -18,16 +18,19 @@
         <img src="${item.imagePath}" alt="${item.title}" loading="lazy" />
         <div class="body">
           <p class="title">${item.title}</p>
-          <div class="row">鏉ユ簮: ${item.sourcePlatform || '-'}</div>
+          <div class="row">来源: ${item.sourcePlatform || '-'}</div>
           <div class="row">${new Date(item.createdAt).toLocaleString()}</div>
           <div class="tags">${tags}</div>
+          <div class="actions">
+            <a class="btn" href="${item.imagePath}" download>下载图片</a>
+          </div>
         </div>
       `;
 
       grid.appendChild(card);
     }
   } catch (error) {
-    meta.textContent = `鍔犺浇澶辫触: ${error.message}`;
+    meta.textContent = `加载失败: ${error.message}`;
   }
 }
 

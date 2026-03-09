@@ -1,4 +1,4 @@
-﻿const path = require('path');
+const path = require('path');
 const fs = require('fs/promises');
 const mysql = require('mysql2/promise');
 const dotenv = require('dotenv');
@@ -23,10 +23,13 @@ async function readRows() {
   });
 
   try {
+    const [columns] = await conn.query("SHOW COLUMNS FROM avatars LIKE 'is_share_visible'");
+    const where = columns.length ? 'is_active = 1 AND is_share_visible = 1' : 'is_active = 1';
+
     const [rows] = await conn.query(`
       SELECT id, title, description, source_platform, source_url, storage_path, tags_json, click_count, created_at
       FROM avatars
-      WHERE is_active = 1
+      WHERE ${where}
       ORDER BY created_at DESC
     `);
     return rows;

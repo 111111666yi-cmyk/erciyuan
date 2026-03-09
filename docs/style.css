@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #f4f7fb;
   --card: #ffffff;
   --text: #1f2937;
@@ -55,4 +55,13 @@ body {
   border-radius: 999px;
   padding: 3px 8px;
   color: #194b8a;
+}
+.actions { margin-top: 8px; }
+.btn {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  text-decoration: none;
 }

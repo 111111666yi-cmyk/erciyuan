@@ -1,14 +1,27 @@
-ï»¿const path = require('path');
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const env = require('./config/env');
-const { testConnection, pool } = require('./db/mysql');
+const { testConnection, ensureSchema, pool } = require('./db/mysql');
 const { createAvatarRepository } = require('./repositories/avatarRepository');
 const { createAvatarService } = require('./services/avatarService');
 const { createAvatarController } = require('./controllers/avatarController');
 const { createApiRouter } = require('./routes/apiRoutes');
+
+function readAdminToken(req) {
+  const headerToken = req.headers['x-admin-token'];
+  if (headerToken) return String(headerToken).trim();
+
+  const queryToken = req.query?.adminToken;
+  if (queryToken) return String(queryToken).trim();
+
+  const bodyToken = req.body?.adminToken;
+  if (bodyToken) return String(bodyToken).trim();
+
+  return '';
+}
 
 function createApp() {
   const app = express();
@@ -19,11 +32,34 @@ function createApp() {
   app.use(express.urlencoded({ extended: true }));
   app.use(morgan('dev'));
 
+  const adminToken = env.security.adminToken;
+
+  app.use((req, res, next) => {
+    if (!adminToken) {
+      req.isAdmin = true;
+      return next();
+    }
+
+    req.isAdmin = readAdminToken(req) === adminToken;
+    return next();
+  });
+
+  const requireAdmin = (req, res, next) => {
+    if (req.isAdmin) {
+      return next();
+    }
+
+    return res.status(401).json({
+      success: false,
+      message: 'ĞèÒª¹ÜÀíÔ±ÁîÅÆ£¬ÇëÔÚÇëÇóÍ· x-admin-token ´«Èë¡£'
+    });
+  };
+
   const avatarRepository = createAvatarRepository(pool);
   const avatarService = createAvatarService(avatarRepository);
   const avatarController = createAvatarController(avatarService);
 
-  app.use('/api', createApiRouter(avatarController));
+  app.use('/api', createApiRouter(avatarController, { requireAdmin }));
 
   app.use('/uploads', express.static(path.resolve(process.cwd(), 'uploads')));
   app.use(express.static(path.resolve(process.cwd(), 'public')));
@@ -34,7 +70,7 @@ function createApp() {
 
   app.use((err, req, res, next) => {
     const status = err.status || 500;
-    const message = err.message || 'æœåŠ¡å™¨å†…éƒ¨é”™è¯¯';
+    const message = err.message || '·şÎñÆ÷ÄÚ²¿´íÎó';
 
     if (env.app.nodeEnv !== 'production') {
       // eslint-disable-next-line no-console
@@ -53,6 +89,7 @@ function createApp() {
 
 async function ensureReady() {
   await testConnection();
+  await ensureSchema();
 }
 
 module.exports = {

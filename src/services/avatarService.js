@@ -1,4 +1,4 @@
-ï»¿const path = require('path');
+const path = require('path');
 const fs = require('fs/promises');
 const env = require('../config/env');
 const { downloadImageBuffer } = require('../utils/downloadImage');
@@ -55,7 +55,8 @@ function createAvatarService(avatarRepository) {
       tags: splitTags(tags),
       width: metadata.width,
       height: metadata.height,
-      fileSize: saved.fileSize
+      fileSize: saved.fileSize,
+      isShareVisible: true
     });
 
     return avatarRepository.findById(avatarId);
@@ -107,7 +108,7 @@ function createAvatarService(avatarRepository) {
         created.push(avatar);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn(`å¯¼å…¥å¤±è´¥ï¼Œå·²è·³è¿‡: ${imageUrl} -> ${error.message}`);
+        console.warn(`µ¼ÈëÊ§°Ü£¬ÒÑÌø¹ý: ${imageUrl} -> ${error.message}`);
       }
     }
 
@@ -146,8 +147,16 @@ function createAvatarService(avatarRepository) {
     };
   }
 
-  async function list(filters) {
-    return avatarRepository.list(filters);
+  async function list(filters, options = {}) {
+    const scope = String(filters.scope || 'public').toLowerCase();
+    const isAdmin = options.isAdmin === true;
+
+    const safeFilters = { ...filters };
+    if (!isAdmin && (scope === 'all' || scope === 'hidden')) {
+      safeFilters.scope = 'public';
+    }
+
+    return avatarRepository.list(safeFilters);
   }
 
   async function click(id) {
@@ -174,11 +183,21 @@ function createAvatarService(avatarRepository) {
     return existing;
   }
 
+  async function setShareVisibility(id, isShareVisible) {
+    const existing = await avatarRepository.findById(id);
+    if (!existing) {
+      return null;
+    }
+
+    return avatarRepository.updateShareVisibility(id, isShareVisible);
+  }
+
   return {
     splitTags,
     list,
     click,
     remove,
+    setShareVisibility,
     createFromUploadFiles,
     createFromUrlItems,
     scrapeAndImport

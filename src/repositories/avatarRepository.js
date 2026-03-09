@@ -1,4 +1,4 @@
-﻿function normalizeRow(row) {
+function normalizeRow(row) {
   let tags = [];
   if (row.tags_json) {
     if (Array.isArray(row.tags_json)) {
@@ -26,6 +26,7 @@
     height: row.height,
     fileSize: row.file_size,
     clickCount: row.click_count,
+    isShareVisible: Number(row.is_share_visible || 0) === 1,
     createdAt: row.created_at,
     updatedAt: row.updated_at
   };
@@ -36,8 +37,8 @@ function createAvatarRepository(pool) {
     const sql = `
       INSERT INTO avatars (
         title, description, source_platform, source_url, storage_path, original_image_url,
-        hash_sha256, tags_json, width, height, file_size
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        hash_sha256, tags_json, width, height, file_size, is_share_visible
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
     const params = [
@@ -51,7 +52,8 @@ function createAvatarRepository(pool) {
       avatar.tags && avatar.tags.length ? JSON.stringify(avatar.tags) : null,
       avatar.width || null,
       avatar.height || null,
-      avatar.fileSize || null
+      avatar.fileSize || null,
+      avatar.isShareVisible === false ? 0 : 1
     ];
 
     const [result] = await pool.execute(sql, params);
@@ -81,6 +83,13 @@ function createAvatarRepository(pool) {
 
     const whereParts = ['is_active = 1'];
     const whereParams = [];
+
+    const scope = String(filters.scope || 'public').toLowerCase();
+    if (scope === 'hidden') {
+      whereParts.push('is_share_visible = 0');
+    } else if (scope !== 'all') {
+      whereParts.push('is_share_visible = 1');
+    }
 
     if (filters.source) {
       whereParts.push('source_platform = ?');
@@ -134,6 +143,11 @@ function createAvatarRepository(pool) {
     return Number(rows[0]?.total || 0);
   }
 
+  async function updateShareVisibility(id, isShareVisible) {
+    await pool.execute('UPDATE avatars SET is_share_visible = ? WHERE id = ?', [isShareVisible ? 1 : 0, id]);
+    return findById(id);
+  }
+
   return {
     create,
     findByHash,
@@ -141,7 +155,8 @@ function createAvatarRepository(pool) {
     list,
     incrementClick,
     removeById,
-    countByStoragePath
+    countByStoragePath,
+    updateShareVisibility
   };
 }
 

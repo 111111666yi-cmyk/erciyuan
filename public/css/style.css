@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #f5f6f8;
   --panel: #ffffff;
   --text: #1a202c;
@@ -46,16 +46,26 @@ a {
 .topbar nav {
   display: flex;
   gap: 14px;
+  align-items: center;
 }
 
-.topbar nav a {
+.topbar nav a,
+.topbar nav .token-btn {
   padding: 8px 10px;
   border-radius: 8px;
 }
 
 .topbar nav a.active,
-.topbar nav a:hover {
+.topbar nav a:hover,
+.topbar nav .token-btn:hover {
   background: rgba(255, 255, 255, 0.14);
+}
+
+.topbar nav .token-btn {
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
 }
 
 .container {
@@ -186,7 +196,38 @@ button:disabled {
 .card-actions {
   margin-top: 8px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  background: #fff;
+  color: var(--text);
+}
+
+.status-pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.status-pill.public {
+  color: #0f6a3a;
+  background: #e7f8ef;
+}
+
+.status-pill.hidden {
+  color: #8a4f00;
+  background: #fff2df;
 }
 
 .tag-list {

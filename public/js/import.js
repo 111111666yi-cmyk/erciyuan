@@ -1,4 +1,4 @@
-ï»¿mountNav('import');
+mountNav('import');
 
 const urlForm = document.getElementById('url-import-form');
 const scrapeForm = document.getElementById('scrape-form');
@@ -11,6 +11,10 @@ urlForm.addEventListener('submit', async (event) => {
   submitBtn.disabled = true;
 
   try {
+    if (!getAdminToken()) {
+      ensureAdminToken();
+    }
+
     const urlsText = document.getElementById('urls').value;
     const urls = urlsText
       .split('\n')
@@ -27,20 +31,20 @@ urlForm.addEventListener('submit', async (event) => {
 
     const response = await fetch('/api/avatars/import/urls', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: authHeaders({ 'Content-Type': 'application/json' }),
       body: JSON.stringify(payload)
     });
 
     const data = await response.json();
     if (!data.success) {
-      showMessage('url-message', data.message || 'URL å¯¼å…¥å¤±è´¥', 'warn');
+      showMessage('url-message', data.message || 'URL µ¼ÈëÊ§°Ü', 'warn');
       return;
     }
 
     showMessage('url-message', data.message, 'ok');
     urlForm.reset();
   } catch (error) {
-    showMessage('url-message', error.message || 'URL å¯¼å…¥å¤±è´¥', 'warn');
+    showMessage('url-message', error.message || 'URL µ¼ÈëÊ§°Ü', 'warn');
   } finally {
     submitBtn.disabled = false;
   }
@@ -54,6 +58,10 @@ scrapeForm.addEventListener('submit', async (event) => {
   submitBtn.disabled = true;
 
   try {
+    if (!getAdminToken()) {
+      ensureAdminToken();
+    }
+
     const payload = {
       platform: document.getElementById('platform').value,
       pageUrl: document.getElementById('page-url').value,
@@ -64,19 +72,19 @@ scrapeForm.addEventListener('submit', async (event) => {
 
     const response = await fetch('/api/avatars/import/scrape', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: authHeaders({ 'Content-Type': 'application/json' }),
       body: JSON.stringify(payload)
     });
 
     const data = await response.json();
     if (!data.success) {
-      showMessage('scrape-message', data.message || 'é‡‡é›†å¤±è´¥', 'warn');
+      showMessage('scrape-message', data.message || '²É¼¯Ê§°Ü', 'warn');
       return;
     }
 
     showMessage('scrape-message', data.message, 'ok');
   } catch (error) {
-    showMessage('scrape-message', error.message || 'é‡‡é›†å¤±è´¥', 'warn');
+    showMessage('scrape-message', error.message || '²É¼¯Ê§°Ü', 'warn');
   } finally {
     submitBtn.disabled = false;
   }

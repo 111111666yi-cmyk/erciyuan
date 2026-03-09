@@ -16,10 +16,12 @@ CREATE TABLE IF NOT EXISTS `avatars` (
   `file_size` BIGINT NULL,
   `click_count` INT UNSIGNED NOT NULL DEFAULT 0,
   `is_active` TINYINT(1) NOT NULL DEFAULT 1,
+  `is_share_visible` TINYINT(1) NOT NULL DEFAULT 1,
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_hash_sha256` (`hash_sha256`),
   KEY `idx_source_platform` (`source_platform`),
+  KEY `idx_share_visible` (`is_share_visible`),
   KEY `idx_created_at` (`created_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,4 +1,4 @@
-ï»¿mountNav('gallery');
+mountNav('gallery');
 
 const state = {
   page: 1,
@@ -9,14 +9,29 @@ function buildQuery() {
   const source = document.getElementById('source').value.trim();
   const tag = document.getElementById('tag').value.trim();
   const keyword = document.getElementById('keyword').value.trim();
+  const scope = document.getElementById('scope').value;
 
   const params = new URLSearchParams();
   params.set('page', String(state.page));
   params.set('limit', String(state.limit));
+  params.set('scope', scope || 'public');
   if (source) params.set('source', source);
   if (tag) params.set('tag', tag);
   if (keyword) params.set('keyword', keyword);
   return params.toString();
+}
+
+async function sendAdminRequest(url, init) {
+  let headers = authHeaders(init.headers || {});
+  if (!headers['x-admin-token']) {
+    const token = ensureAdminToken();
+    if (!token) {
+      throw new Error('Î´ÉèÖÃ¹ÜÀíÔ±ÁîÅÆ');
+    }
+    headers = authHeaders(init.headers || {});
+  }
+
+  return fetch(url, { ...init, headers });
 }
 
 function renderItems(items) {
@@ -24,7 +39,7 @@ function renderItems(items) {
   root.innerHTML = '';
 
   if (!items.length) {
-    root.innerHTML = '<div class="panel">æš‚æ— æ•°æ®ï¼Œè¯·å…ˆä¸Šä¼ æˆ–å¯¼å…¥ã€‚</div>';
+    root.innerHTML = '<div class="panel">ÔİÎŞÊı¾İ£¬ÇëÏÈÉÏ´«»òµ¼Èë¡£</div>';
     return;
   }
 
@@ -33,16 +48,20 @@ function renderItems(items) {
     card.className = 'card';
 
     const tags = (item.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join('');
+    const visibilityLabel = item.isShareVisible ? '¹«¿ª' : 'Òş²Ø';
 
     card.innerHTML = `
       <img src="${item.storagePath}" alt="${item.title}" loading="lazy" />
       <div class="card-body">
         <p class="card-title">${item.title}</p>
-        <div class="meta-row">æ¥æº: ${item.sourcePlatform} | ç‚¹å‡»: <span data-click-id="${item.id}">${item.clickCount}</span></div>
+        <div class="meta-row">ID: ${item.id} | À´Ô´: ${item.sourcePlatform} | µã»÷: <span data-click-id="${item.id}">${item.clickCount}</span></div>
+        <div class="meta-row">ÔÆ¶Ë×´Ì¬: <span class="status-pill ${item.isShareVisible ? 'public' : 'hidden'}">${visibilityLabel}</span></div>
         <div class="tag-list">${tags}</div>
         <div class="meta-row">${new Date(item.createdAt).toLocaleString()}</div>
         <div class="card-actions">
-          <button class="danger" data-delete-id="${item.id}" type="button">åˆ é™¤</button>
+          <a class="btn secondary" href="${item.storagePath}" download>ÏÂÔØ</a>
+          <button class="secondary" data-share-id="${item.id}" data-next-visible="${item.isShareVisible ? '0' : '1'}" type="button">${item.isShareVisible ? 'ÔÆ¶ËÒş²Ø' : '»Ö¸´¹«¿ª'}</button>
+          <button class="danger" data-delete-id="${item.id}" type="button">É¾³ı</button>
         </div>
       </div>
     `;
@@ -56,22 +75,55 @@ function renderItems(items) {
       }
     });
 
+    const shareBtn = card.querySelector(`[data-share-id="${item.id}"]`);
+    shareBtn.addEventListener('click', async (event) => {
+      event.stopPropagation();
+
+      const nextVisible = shareBtn.getAttribute('data-next-visible') === '1';
+      const actionLabel = nextVisible ? '»Ö¸´¹«¿ª' : '´ÓÔÆ¶ËÒş²Ø';
+      const ok = window.confirm(`È·ÈÏ${actionLabel}¡¸${item.title}¡¹Âğ£¿`);
+      if (!ok) return;
+
+      try {
+        const response = await sendAdminRequest(`/api/avatars/${item.id}/share-visibility`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ isShareVisible: nextVisible })
+        });
+
+        const data = await response.json();
+        if (!data.success) {
+          showMessage('message', data.message || '²Ù×÷Ê§°Ü', 'warn');
+          return;
+        }
+
+        showMessage('message', data.message, 'ok');
+        load();
+      } catch (error) {
+        showMessage('message', error.message || '²Ù×÷Ê§°Ü', 'warn');
+      }
+    });
+
     const deleteBtn = card.querySelector(`[data-delete-id="${item.id}"]`);
     deleteBtn.addEventListener('click', async (event) => {
       event.stopPropagation();
 
-      const ok = window.confirm(`ç¡®è®¤åˆ é™¤å›¾ç‰‡ã€Œ${item.title}ã€å—ï¼Ÿ`);
+      const ok = window.confirm(`È·ÈÏÉ¾³ıÍ¼Æ¬¡¸${item.title}¡¹Âğ£¿`);
       if (!ok) return;
 
-      const response = await fetch(`/api/avatars/${item.id}`, { method: 'DELETE' });
-      const data = await response.json();
-      if (!data.success) {
-        showMessage('message', data.message || 'åˆ é™¤å¤±è´¥', 'warn');
-        return;
-      }
+      try {
+        const response = await sendAdminRequest(`/api/avatars/${item.id}`, { method: 'DELETE' });
+        const data = await response.json();
+        if (!data.success) {
+          showMessage('message', data.message || 'É¾³ıÊ§°Ü', 'warn');
+          return;
+        }
 
-      showMessage('message', 'åˆ é™¤æˆåŠŸ', 'ok');
-      load();
+        showMessage('message', 'É¾³ı³É¹¦', 'ok');
+        load();
+      } catch (error) {
+        showMessage('message', error.message || 'É¾³ıÊ§°Ü', 'warn');
+      }
     });
 
     root.appendChild(card);
@@ -85,14 +137,14 @@ async function load() {
   const data = await response.json();
 
   if (!data.success) {
-    showMessage('message', data.message || 'åŠ è½½å¤±è´¥', 'warn');
+    showMessage('message', data.message || '¼ÓÔØÊ§°Ü', 'warn');
     return;
   }
 
   renderItems(data.items || []);
 
   const totalPage = Math.max(1, Math.ceil((data.total || 0) / state.limit));
-  document.getElementById('pager-info').textContent = `ç¬¬ ${state.page} / ${totalPage} é¡µï¼Œå…± ${data.total} æ¡`;
+  document.getElementById('pager-info').textContent = `µÚ ${state.page} / ${totalPage} Ò³£¬¹² ${data.total} Ìõ`;
   document.getElementById('prev-btn').disabled = state.page <= 1;
   document.getElementById('next-btn').disabled = state.page >= totalPage;
 }
